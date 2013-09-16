@@ -5,42 +5,26 @@
 // walk towards one another and swap values
 
 #include <stdio.h>
+#include <string>
 
 
-void reverse_string(char* start){
-
-  char* end = start;
-  char tmp;
- 
-  // move the 'end' pointer to the last character
-  while ( *end){ 
-    end++;
-  }
-  end--;
-   
-  while( start < end ){
-    tmp = *start;
-    *start = *end;
-    *end   = tmp;
-    start++;
-    end--;
-  }
-}
+std::string reverse_string(std::string input)
+	{
+		std::string result;
+		for (int i = input.length() - 1; i >= 0; i--)
+		{
+			result.push_back(input[i]);
+		}
+		return result;
+	}
 
 
-int main(){
-
-  char a[] = "watermelon";
-  char b[] = "fleamarket";
-
-  
-  reverse_string(a);
-  reverse_string(b);
-
-  printf("%s \n",a);
-  printf("%s \n\n",b);
-
-  return 0;
+int _tmain(int argc, _TCHAR* argv[])
+{
+	std::string s;
+	std::cin >> s;
+	std::string result = reverse_string(s);
+	return 0;
 }
 
 
