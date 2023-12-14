@@ -4,6 +4,8 @@
 // as well as a pointer to the end of the string.  The two pointers will 
 // walk towards one another and swap values
 
+#include<iostream>
+using namespace std;
 #include <stdio.h>
 
 
@@ -25,6 +27,7 @@ void reverse_string(char* start){
     start++;
     end--;
   }
+  
 }
 
 
@@ -32,13 +35,16 @@ int main(){
 
   char a[] = "watermelon";
   char b[] = "fleamarket";
+  char c[] = "Dhanashri";
 
   
   reverse_string(a);
   reverse_string(b);
+  reverse_string(c);
 
   printf("%s \n",a);
   printf("%s \n\n",b);
+  printf("%s\n",c);
 
   return 0;
 }
