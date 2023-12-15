@@ -51,7 +51,7 @@ using namespace std;
 
 void reverse_string(string &a){
     int i = 0;
-    int j = a.size();
+    int j = a.size() - 1;
     while(i!=j){
       swap(a[i], a[j]);
       i++; j--;
@@ -60,9 +60,11 @@ void reverse_string(string &a){
 
 int main(){
   string a;
+  cout<<"Enter a String >> "<<endl;
   cin>>a;
-  cout<<"Original String "<<a<<endl;
+  cout<<"Original String >> "<<a<<endl;
   reverse_string(a);
+  cout<<"Reversed String is >> "<<a<<endl;
   cout<<a<<endl;
   return 0;
 }
