@@ -1,2 +1,1 @@
-reverse_string
-==============
+A C++ Code to Demonstrate Reversing of a String
